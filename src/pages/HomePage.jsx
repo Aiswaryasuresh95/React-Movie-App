@@ -1,13 +1,16 @@
 import React from 'react';
-
 import SearchAreaComponent from '../Components/SearchAreaComponent';
+import HomePageMovieList from '../Components/HomePageMovieList';
+import { Fragment } from 'react';
 
 
 const HomePage = () =>{
     return(
-         <div>
+         <Fragment>
             <SearchAreaComponent />
-        </div>
+            <HomePageMovieList />
+            
+        </Fragment>
     )
 }
 

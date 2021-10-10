@@ -1,17 +1,24 @@
-import HomePage  from "./UI/HomePage";
-import HeaderComponent  from "./Components/HeaderComponent";
 
+import { useContext } from "react";
+import HomePage from "./pages/HomePage";
+import HeaderComponent  from "./Components/HeaderComponent";
+import MovieProvider from "./store/movie.provider";
+import MovieContext from "./store/movie.context";
 
 import './App.css'
-require('dotenv').config()
-console.log(process.env.REACT_APP_API_KEY)
+
+
 
 const  App =() => {
+
+
+
+
   return (
-    <div>
+    <MovieProvider>
       <HeaderComponent />
        <HomePage />
-    </div>
+    </MovieProvider>
   
   );
 }

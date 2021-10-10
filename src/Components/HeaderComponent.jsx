@@ -1,11 +1,13 @@
-import React from 'react';
+import React,{useContext} from 'react';
 // import '/_HeaderComponent.scss'
 import '../Styles/_HeaderComponent.scss';
 
 
 
 
+
 const HeaderComponent = () =>{
+  
 
     return(
         <div className="header_container">
