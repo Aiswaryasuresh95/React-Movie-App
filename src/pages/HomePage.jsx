@@ -7,7 +7,7 @@ import { Fragment } from 'react';
 const HomePage = () =>{
     return(
          <Fragment>
-            <SearchAreaComponent />
+            <SearchAreaComponent/>
             <HomePageMovieList />
             
         </Fragment>
