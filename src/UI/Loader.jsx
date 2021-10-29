@@ -10,4 +10,3 @@ const Loader = () =>{
 
 export default Loader;
 
-// https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchItem}

@@ -1,7 +1,7 @@
 
 import { useContext } from "react";
 import HomePage from "./pages/HomePage";
-import HeaderComponent  from "./Components/HeaderComponent";
+import HeaderComponent  from "./pages/HeaderComponent";
 import MovieProvider from "./store/movie.provider";
 import MovieContext from "./store/movie.context";
 

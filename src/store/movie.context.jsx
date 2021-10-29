@@ -8,15 +8,18 @@ const MovieContext = React.createContext({
     trendingMovieList:[],
     mostRatedMovieList:[],
     upcomingMovieList:[],
-    searchResultList:[],
-    loading:false,
+    homeloading:false,
+    homeresultmsg:'',
     addFavList:(listitem)=>{},
     removeFavList:(id)=>{},
     showMovieDeatils : (id)=>{},
-    showSearchResult : (moviename)=>{}
-    
+    showSearchResult : (moviename)=>{},
+    searchListItems : {
+        searchResultList:[],
+        searchloading:false,
+        searchResultMsg:''
+    }
 
 });
-
 
 export default MovieContext;

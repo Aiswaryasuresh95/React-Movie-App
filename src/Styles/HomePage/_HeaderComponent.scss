@@ -1,0 +1,14 @@
+
+.header{
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    
+    &_logo {
+         h1{
+             font-size: 2rem;
+            
+         }
+    }
+}

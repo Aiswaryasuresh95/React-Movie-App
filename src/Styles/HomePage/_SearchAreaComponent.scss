@@ -2,14 +2,15 @@
 @import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
 
 .searchform_container {
-    width: 100%;
+    width: 50%;
     display: inline-block;
     position: relative;
     height: 3rem;
-    float: right;
+    float: left;
     padding: 1rem;
     position: relative;
-    box-shadow: 10px 0px 10px rgb(184, 181, 181);
+    border: 2px solid rgb(236, 221, 221);
+    border-radius:2rem;
     
     
   }
@@ -23,7 +24,7 @@
     border: none;
     outline: none;
     color: #555;
-    padding: 3px;
+    padding: 2px;
     padding-left: 6rem;
     width: 0px;
     position: absolute;

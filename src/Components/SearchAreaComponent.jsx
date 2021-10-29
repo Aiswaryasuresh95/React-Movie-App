@@ -1,20 +1,16 @@
-import React ,{useEffect, useRef,useState,useReducer} from 'react';
-import '../Styles/_SearchAreaComponent.scss';
+import React ,{useEffect, useRef,useState,useContext} from 'react';
+import '../Styles/HomePage/_SearchAreaComponent.scss';
 import MovieContext from '../store/movie.context';
 
 
 const SearchAreaComponent = () =>{
- const movCtx = useReducer(MovieContext);
+ const movCtx = useContext(MovieContext);
  const [searchItem, setSearchItem] = useState('');
  const focusRef = useRef();
 
 const handleSubmit  = (event) =>{
     event.preventDefault();
-    
-
     movCtx.showSearchResult(searchItem);
-
-
 }
 
 const handleChange =(event) =>{
