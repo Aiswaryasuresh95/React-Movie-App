@@ -1,3 +1,19 @@
+@import "../variables";
+
 .homepagelist--wrapper{
+
+
+    button.rec.rec-arrow-right{
+        background-color: $primary-color;
+        border-radius: 1px;
+    }
+    button.jRFJkP{
+        border-radius: opx;
+    }
+
+    button.cNNJIt:disabled {
+        cursor: not-allowed;
+        display: none;
+    }
   
 }

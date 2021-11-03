@@ -9,16 +9,15 @@ import Carousel from 'react-elastic-carousel'
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 768, itemsToShow: 3 },
+    { width: 550, itemsToShow: 2, itemsToScroll: 3 },
+    { width: 800, itemsToShow: 3 },
     { width: 900, itemsToShow: 4 }
   ];
 
 
+const HomePageMovieList = (props) =>{
 
-const HomePageMovieList = () =>{
-    const movCtx=useContext(MovieContext);
-    const {trendingMovieList,upcomingMovieList,mostRatedMovieList}=movCtx;
+    const {trending,rated,upcoming,errmsg,loading}=props;
    
     
 
@@ -26,12 +25,12 @@ const HomePageMovieList = () =>{
         
         
         <section> 
-            {movCtx.homeresultmsg ? 
+            {errmsg ? 
             
-            <h1>{movCtx.homeresultmsg}</h1>
+            <h1>{errmsg}</h1>
             :
 
-            movCtx.homeloading ?
+            loading ?
                 <div className="loader--container"> 
                 <Loader />   
                 </div> 
@@ -47,12 +46,12 @@ const HomePageMovieList = () =>{
                       enableSwipe={true}
                       showArrows={true}
                       >
-                      {trendingMovieList.map((item)=>{
+                      {trending.map((item)=>{
                        
                       return(
                        
                     
-                           <MovieCard {...item} />
+                           <MovieCard key={item.id} {...item} />
                         
                        
                          )
@@ -71,10 +70,10 @@ const HomePageMovieList = () =>{
                       enableSwipe={true}
                       showArrows={true}
                       >
-                    {upcomingMovieList.map((item)=>{
+                    {upcoming.map((item)=>{
                          return(
                              
-                                 <MovieCard  {...item} /> 
+                                 <MovieCard key={item.id}  {...item} /> 
                     
                          )
                         })}
@@ -90,12 +89,12 @@ const HomePageMovieList = () =>{
                       breakPoints={breakPoints}
                       pagination={false}
                       enableSwipe={true}
-                      showArrows={false}
+                      showArrows={true}
                       >
-                   {mostRatedMovieList.map((item)=>{
+                   {rated.map((item)=>{
                         return(
                             
-                                <MovieCard   {...item} /> 
+                                <MovieCard  key={item.id}  {...item} /> 
                 
                         )
     

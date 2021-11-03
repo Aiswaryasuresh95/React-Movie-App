@@ -11,11 +11,11 @@
     text-align: center;
     overflow: hidden;
     z-index: 1;
-    transition: 0.4s ease-out;
+    transition: 0.7s ease-out;
     box-shadow: 0px 7px 10px rgba(black, 0.5);
 
     &:hover{
-        transform: translateY(20px);
+        transform: translate(5px);
     
 
         &::after{

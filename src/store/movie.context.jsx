@@ -5,15 +5,11 @@ import React from "react";
 const MovieContext = React.createContext({
       
     favMovieList:[],
-    trendingMovieList:[],
-    mostRatedMovieList:[],
-    upcomingMovieList:[],
-    homeloading:false,
-    homeresultmsg:'',
     addFavList:(listitem)=>{},
     removeFavList:(id)=>{},
-    showMovieDeatils : (id)=>{},
     showSearchResult : (moviename)=>{},
+    showMovieSummary :(id)=>{},
+    movieSummary:{},
     searchListItems : {
         searchResultList:[],
         searchloading:false,

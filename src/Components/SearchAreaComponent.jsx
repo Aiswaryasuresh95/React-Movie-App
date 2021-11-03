@@ -1,16 +1,23 @@
 import React ,{useEffect, useRef,useState,useContext} from 'react';
 import '../Styles/HomePage/_SearchAreaComponent.scss';
-import MovieContext from '../store/movie.context';
+import MovieContext from '../store/movie.context';  
+import { Link } from 'react-router-dom';
 
 
-const SearchAreaComponent = () =>{
+
+
+const SearchAreaComponent = ({history}) =>{
  const movCtx = useContext(MovieContext);
  const [searchItem, setSearchItem] = useState('');
  const focusRef = useRef();
 
+
 const handleSubmit  = (event) =>{
     event.preventDefault();
+    
     movCtx.showSearchResult(searchItem);
+    
+   
 }
 
 const handleChange =(event) =>{
@@ -26,6 +33,7 @@ const handleChange =(event) =>{
 
 
     return(
+       
         <div className="searchform_container">
             <form onSubmit={handleSubmit}>
                 <input 
@@ -43,6 +51,7 @@ const handleChange =(event) =>{
             </form>
 
         </div>
+        
     )
 }
 
