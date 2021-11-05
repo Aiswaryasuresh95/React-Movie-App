@@ -47,7 +47,20 @@
             z-index: 5;
             color: rgb(226, 216, 216);
 
-            a:active,a:hover,a:visited{
+            .summary--icon-outline{
+               cursor: pointer;
+
+    
+            }
+            .summary--icon-fill{
+                color: rgb(243, 26, 26);
+                cursor: pointer;
+            }
+
+        
+
+
+            a:active,a:hover,a:visited,a:link{
                 color: white;
 
             }

@@ -4,7 +4,9 @@ import img from '../assets/movieimage.jpg';
 import {  BrowserRouter,Link } from 'react-router-dom';
 
  
-const MovieCard = ({...item}) =>{
+const MovieCard = ({cardstyle ,...item}) =>{
+
+
 
 
   
@@ -12,7 +14,8 @@ const MovieCard = ({...item}) =>{
 
   
       <Link to={`/summary/${item.id}`}>
-       <div className="moviecard">
+
+       <div className={`moviecard ${cardstyle}`}>
         
          { item.poster_path !== null ? 
            <img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item.image} className="moviecard--img"/>

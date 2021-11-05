@@ -1,11 +1,19 @@
-import React,{useContext,useEffect} from 'react';
+import React,{useContext,useEffect, useState} from 'react';
 import MovieContext from '../store/movie.context';
 import '../Styles/Summarypage/_summaryPage.scss';
+import {FiHeart} from 'react-icons/fi'
+import {BsHeartFill} from 'react-icons/bs'
 
 
 const MovieSummary = (props) =>{
+    const [clicked, setclicked] = useState(false)
     const movCtx=useContext(MovieContext);
     const id=props.match.params.id;
+
+    const onClick = () =>{
+        setclicked(!clicked);
+        movCtx.addFavList(id);
+    }
 
 
     useEffect(() => {
@@ -24,6 +32,15 @@ const MovieSummary = (props) =>{
                 </div>
                 <div className="summary--container-content">
                     <h1>{summary.title}</h1>
+                    <div>
+                        {clicked ?
+                        <BsHeartFill  onClick={onClick} size={35} className="summary--icon-fill"/>
+                        :
+                        <FiHeart size={35} className="summary--icon-outline" title="Add to Favorite" onClick={onClick}/>
+
+                         
+                        }
+                    </div>
 
                    {/* {summary.genres.map((item)=>{
                       return(

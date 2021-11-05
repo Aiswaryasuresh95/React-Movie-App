@@ -5,7 +5,7 @@
     width: 15rem;
     height:20rem;
     position: relative;
-    background: $primary-color;
+    background:transparent;
     margin-bottom: 1rem;
     cursor: pointer;
     text-align: center;
@@ -13,6 +13,12 @@
     z-index: 1;
     transition: 0.7s ease-out;
     box-shadow: 0px 7px 10px rgba(black, 0.5);
+
+    .card-small{
+        width: 5rem;
+        height: 15rem;
+    }
+
 
     &:hover{
         transform: translate(5px);

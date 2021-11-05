@@ -17,6 +17,7 @@ const MovieProvider = (props) =>{
      const [searchlist,setSearchlist]=useState([]);
      const [searchresultmsg,setResultMsg] = useState('');
      const [moviesummary,setMovieSummary]=useState({});
+     const [favlist,setFavlist]=useState([]);
 
 
 
@@ -33,13 +34,13 @@ const MovieProvider = (props) =>{
                 const result=data.results;
 
                         if( result.length === 0){
-                            setResultMsg('no Movies Found');
+                            setResultMsg('No Movies Found');
                         }
                     setSearchlist(result)
                     setSearchLoading(false)
             }
             catch(e){
-                setResultMsg('Can not load from server');
+                setResultMsg('Can Not Load From server.....');
                 setSearchLoading(false)}}
          
         fetchMovie();
@@ -58,13 +59,46 @@ const MovieProvider = (props) =>{
                const response=await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`);
                const data = await response.json();
                setMovieSummary(data)
-               console.log(moviesummary)
+        
            }
        
            catch(e){
-               console.log('can not load from server')} }
+               console.log('Can Not Load From Server......')} }
         
        fetchMovie();
+    }
+
+
+
+
+    const addFavList = (id) =>{
+
+        const fetchMovie = async() =>{
+            try{
+                const response=await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`);
+                const data = await response.json();
+                setFavlist([...favlist,data])
+                console.log(favlist)
+            }
+        
+            catch(e){
+                console.log('Can Not Load From Server......')} 
+            }
+        
+
+      const existingindex=favlist.findIndex((item)=>item.id ==id);
+      console.log(existingindex)
+        
+        if(existingindex>=0){
+            setFavlist(favlist);
+            console.log(favlist)
+        }
+        else{
+            fetchMovie();
+        }
+
+        
+
     }
 
         
@@ -76,12 +110,10 @@ const MovieProvider = (props) =>{
 // Movie context //
 
     const movieContext={
-    
-        
 
-
+        favMovieList:[...favlist],
+        addFavList:addFavList,
         showSearchResult :searchResultHandler,
-
         showMovieSummary :ShowMovieHandler,
         movieSummary:{...moviesummary},
 

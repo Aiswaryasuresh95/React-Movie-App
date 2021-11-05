@@ -24,17 +24,21 @@ const HomePageMovieList = (props) =>{
     return(
         
         
-        <section> 
+        <section className="home--container"> 
+        
             {errmsg ? 
-            
+            <div className="msg--center">
             <h1>{errmsg}</h1>
+            </div>
             :
 
             loading ?
-                <div className="loader--container"> 
+                <div className="loading--center"> 
                 <Loader />   
                 </div> 
               :
+            
+
               <section>
                   
                   <div>

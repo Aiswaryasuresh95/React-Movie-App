@@ -6,6 +6,7 @@ import MovieProvider from "./store/movie.provider";
 import MovieContext from "./store/movie.context";
 import MovieSummary from "./pages/MoviesummaryPage";
 import SearchResultComponent from "./Components/SearchResultComponent";
+import ShowFavoriteMovie from "./Components/ShowFavoriteMovie";
 import {
   Switch,
   Route,
@@ -16,13 +17,14 @@ import './App.css'
 
 
 
+
 const  App =() => {
 
 
 
 
   return (
-  
+
     <MovieProvider>
       <HeaderComponent />
       <Switch>
@@ -30,10 +32,12 @@ const  App =() => {
       
        <Route path='/result' component={SearchResultComponent} />
         <Route path='/summary/:id' component={MovieSummary} />
+         <Route path='/favorite' component={ShowFavoriteMovie}/> 
         <Redirect to='/' />
 
       </Switch>
     </MovieProvider>
+
 
   );
 }

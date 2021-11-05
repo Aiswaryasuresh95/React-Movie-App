@@ -43,7 +43,7 @@ const HomePage = () =>{
             }
 
             catch(e){
-               sethomeresultmsg('can not load from server');
+               sethomeresultmsg('Can Not Load From Server....');
                setHomeLoading(false);
             }
 
