@@ -15,7 +15,7 @@ body{
   padding: 0;
   line-height: 1.3;
   font-size: 1.125rem;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
   
 }
 a,a:visited,a:hover{
@@ -30,4 +30,10 @@ li{
   list-style: none;
  
 }
+
+.grid-display{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+}
+
 

@@ -1,6 +1,6 @@
 import React,{useContext,useEffect, useState} from 'react';
 import MovieContext from '../store/movie.context';
-import '../Styles/Summarypage/_summaryPage.scss';
+import '../Styles/Subcomponents/_summaryPage.scss';
 import {FiHeart} from 'react-icons/fi'
 import {BsHeartFill} from 'react-icons/bs'
 

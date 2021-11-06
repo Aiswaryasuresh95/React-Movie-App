@@ -6,6 +6,9 @@
     position: relative;
     margin-top: 3rem;
     
+    color: $main-heading;
+    text-transform: capitalize;
+    
 
     .loading--center{
       
@@ -27,11 +30,14 @@
     
     h1{
         font-size: 2rem;
-        margin:1rem;
-        color: rgb(146, 142, 142);
+        margin:0 0 1rem 5rem;
+        
     }
     
 
 
 
+}
+.margin{
+    margin-bottom: 3rem;
 }

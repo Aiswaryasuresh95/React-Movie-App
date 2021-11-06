@@ -41,7 +41,7 @@ const HomePageMovieList = (props) =>{
 
               <section>
                   
-                  <div>
+                  <div className="home--container-trending margin">
             
                       <h1>Trending movies</h1>
                       <Carousel 
@@ -66,8 +66,8 @@ const HomePageMovieList = (props) =>{
                  
                 
             
-                    <div>
-                    <h1>upcoming movies</h1>
+                    <div className="home--container-upcoming margin">
+                    <h1>Upcoming Movies</h1>
                     <Carousel 
                       breakPoints={breakPoints}
                       pagination={false}
@@ -87,7 +87,7 @@ const HomePageMovieList = (props) =>{
               
                
             
-                   <div>
+                   <div className="home--container-rated margin">
                    <h1>most rated movies</h1>
                    <Carousel 
                       breakPoints={breakPoints}

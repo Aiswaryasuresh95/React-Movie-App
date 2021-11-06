@@ -1,5 +1,6 @@
 import React,{useState}from 'react';
 import MovieContext from './movie.context';
+import { useHistory } from "react-router-dom";
 
 require('dotenv').config();
 
@@ -19,6 +20,7 @@ const MovieProvider = (props) =>{
      const [moviesummary,setMovieSummary]=useState({});
      const [favlist,setFavlist]=useState([]);
 
+     const history = useHistory();
 
 
      const searchResultHandler = (moviename) =>{
@@ -29,7 +31,7 @@ const MovieProvider = (props) =>{
             
             try{
                 const response=await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${moviename}`);
-            
+                 history.push('/result')
                 const data = await response.json();
                 const result=data.results;
 

@@ -2,7 +2,7 @@ import React,{useContext,useState} from "react"
 import MovieCard from "../UI/MovieCard"
 import Loader from "../UI/Loader"
 import MovieContext from "../store/movie.context"
-import Carousel from 'react-elastic-carousel'
+import '../Styles/Subcomponents/_SearchResultComponent.scss';
 
 
 const breakPoints = [
@@ -19,40 +19,28 @@ const SearchResultComponent = () =>{
 
     const {searchResultList,searchResultMsg,searchloading}=movCtx.searchListItems;
 
-    // if(searchResultList.length >4)
-    // {
-    //     setshowslider(true)
-    // }
-
-   
+ 
    
 
     return(
-    <section>
+    <section className="search--container">
         {searchloading && <Loader />}
         {searchResultMsg && <h1>{movCtx.searchListItems.searchResultMsg}</h1>}
 
 
         {searchResultList.length !== 0 ? 
 
-          
-            <Carousel breakPoints={breakPoints} >
+          <div className="search--container-result grid-display">
+        
             {searchResultList.map((item)=>{
             return(
                 
-                <MovieCard key={item.id} {...item}  />
+                <MovieCard key={item.id} cardstyle='card-small' {...item}  />
     
             )
         })}
-       </Carousel>
-        
-        
-         
-
-
-
-
-
+       </div>
+    
         :
         null}
 
