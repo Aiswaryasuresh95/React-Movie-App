@@ -30,7 +30,10 @@ const SearchResultComponent = () =>{
 
         {searchResultList.length !== 0 ? 
 
-          <div className="search--container-result grid-display">
+       <div className="search--container-result">
+        <h1 >Your Search Result</h1>
+          <div className="grid-display">
+            
         
             {searchResultList.map((item)=>{
             return(
@@ -40,6 +43,7 @@ const SearchResultComponent = () =>{
             )
         })}
        </div>
+       </div>  
     
         :
         null}

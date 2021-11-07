@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const SearchAreaComponent = ({history}) =>{
+const SearchAreaComponent = () =>{
  const movCtx = useContext(MovieContext);
  const [searchItem, setSearchItem] = useState('');
  const focusRef = useRef();
