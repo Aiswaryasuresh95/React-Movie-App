@@ -22,7 +22,7 @@ import '../Styles/Subcomponents/_favoritelist.scss';
 
           {movCtx.favMovieList.length>0 && 
            <div>
-             <h1>Your Favorite Movies</h1>
+             <h1 className="favoritelist--heading">Your Favorite Movies</h1>
 
               <div className="favoritelist--container-card grid-display">
                 {movCtx.favMovieList.map((item)=>{

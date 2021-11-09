@@ -3,6 +3,7 @@ import MovieCard from "../UI/MovieCard"
 import Loader from "../UI/Loader"
 import MovieContext from "../store/movie.context"
 import '../Styles/Subcomponents/_SearchResultComponent.scss';
+import '../Styles/_global.scss';
 
 
 const breakPoints = [
@@ -31,7 +32,7 @@ const SearchResultComponent = () =>{
         {searchResultList.length !== 0 ? 
 
        <div className="search--container-result">
-        <h1 >Your Search Result</h1>
+        <h1 className="result--heading">Your Search Result</h1>
           <div className="grid-display">
             
         

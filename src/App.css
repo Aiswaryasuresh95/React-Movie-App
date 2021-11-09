@@ -1,3 +1,4 @@
+
 html{
   font-size: 100%;
   box-sizing: border-box;
@@ -31,9 +32,5 @@ li{
  
 }
 
-.grid-display{
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-}
 
 

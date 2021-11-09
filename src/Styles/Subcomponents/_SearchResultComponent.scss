@@ -1,17 +1,32 @@
 
 @import '../variables';
+@import '../mixins';
 
 .search--container{
-    width: 100%;
-    height: 100%;
-    padding-left: 3.5rem;
+    
     margin-top: 3rem;
 
+    @include breakpoint-down(medium){
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    @include breakpoint-down(vsmall){
+        padding-left: 0;
+    }
+
+
+
     &-result{
-        h1{
+        .result--heading{
             font-size: 2rem;
             color: $main-heading;
             margin-bottom: 1rem;
+            margin-left: 2.8rem;
+
+            @include breakpoint-down(medium){
+                font-size: 1.8rem;
+            }
         }
     }
 }

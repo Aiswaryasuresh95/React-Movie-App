@@ -1,0 +1,26 @@
+@import './mixins';
+
+.grid-display{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    place-content:center;
+    justify-items: center;
+    align-items: center;
+    
+
+    @include breakpoint-down(medium){
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    @include breakpoint-down(small){
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    @include breakpoint-down(vsmall){
+        grid-template-columns: repeat(2,1fr);
+
+
+    }
+
+  }
+  

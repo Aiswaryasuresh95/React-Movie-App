@@ -21,9 +21,9 @@ const HeaderComponent = () =>{
             </Link>
 
             <SearchAreaComponent />
-            <div>
+            <div className="header--icon">
                 <Link to='/favorite'>
-                <BsHeartFill className="header--icon" size={35} />
+                <BsHeartFill className="icon" size={35} />
                 </Link>
                 
             </div>

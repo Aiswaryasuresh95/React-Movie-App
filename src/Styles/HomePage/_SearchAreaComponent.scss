@@ -12,9 +12,13 @@
     position: relative;
     border: 2px solid rgb(236, 221, 221);
     border-radius:2rem;
+    
+  
 
-    @include breakpoint-down(large){
-      width: 40%;
+    @include breakpoint-down(small){
+      width: 200%;
+      
+
 
     }    
   
