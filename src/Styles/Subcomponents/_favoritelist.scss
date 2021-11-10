@@ -9,7 +9,7 @@
     position: relative;
 
     @include breakpoint-down(medium){
-        margin-top: 5rem;
+        margin-top: 1rem;
         text-align: center;
         
     }
@@ -27,6 +27,8 @@
          }
     }
 
+    &-main{
+
     .favoritelist--heading
     {
          color: $main-heading;
@@ -37,6 +39,28 @@
              font-size: 2rem;
 
          }
+
+      }
+
+    &-card{
+        width: 12rem;
+        height:18rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        border: 3px solid rgb(196, 192, 192);
+
+        .icon{
+            color: rgb(243, 26, 26);
+            cursor: pointer;
+
+            
+        }
+
     }
+}
   
 }

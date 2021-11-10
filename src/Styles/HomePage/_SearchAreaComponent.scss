@@ -17,6 +17,7 @@
 
     @include breakpoint-down(small){
       width: 200%;
+      height: 1rem;
       
 
 
@@ -44,6 +45,12 @@
     z-index: 3;
     transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
     cursor: pointer;
+    
+    @include breakpoint-down(small){
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
 
 
    
@@ -77,6 +84,12 @@
     cursor: pointer;
     transition: opacity .4s ease;
     margin-left: 2rem;
+
+
+    @include breakpoint-down(small){
+        background-size: 50%;
+        background-position: top ;
+    }
   }
   
   input[type="submit"]:hover {

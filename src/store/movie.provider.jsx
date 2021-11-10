@@ -103,6 +103,12 @@ const MovieProvider = (props) =>{
 
     }
 
+    const removeFavlist = (id) =>{
+        const filteredlist=favlist.filter((item)=>item.id!==id);
+
+        setFavlist(filteredlist);
+    }
+
         
 
 
@@ -115,6 +121,7 @@ const MovieProvider = (props) =>{
 
         favMovieList:[...favlist],
         addFavList:addFavList,
+        removeFavList:removeFavlist,
         showSearchResult :searchResultHandler,
         showMovieSummary :ShowMovieHandler,
         movieSummary:{...moviesummary},

@@ -8,6 +8,7 @@
     margin-top: 1.5rem;
     position: sticky;
     top: 0;
+    
     background: white;
     z-index: 10000;
    
@@ -17,7 +18,10 @@
 @include breakpoint-down(small){
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-row-gap: 1rem;
+    grid-row-gap: 0;
+    padding: 1rem;
+    margin-top:0;
+    height: 6rem;
     
 }
     
@@ -25,6 +29,10 @@
          h1{
              font-size: 2rem;
              color: rgb(233, 71, 31);
+
+             @include breakpoint-down(small){
+                 font-size: 1.5rem;
+             }
             
          }
     }
@@ -32,9 +40,15 @@
     &--icon{
         grid-column: 2/3;
         grid-row: 1;
+        
+
+        @include breakpoint-down(small){
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+
+        }
+        
 
     .icon{
         color: rgb(243, 26, 26);
